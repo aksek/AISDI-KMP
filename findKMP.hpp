@@ -6,7 +6,7 @@
 #include <iostream>
 
 std::vector<int> findKMP(std::string const &str, std::string const &text) {
-    if (!text.length() || text.length() < str.length()) {
+    if (!text.length() || !str.length() || text.length() < str.length()) {
         return {};
     }
     int tableKMP[str.length() + 1];

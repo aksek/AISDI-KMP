@@ -2,12 +2,13 @@
 #include<vector>
 #include<string>
 #include<cstdlib>
+#include<cassert>
 
 #include"findN.hpp"
 #include"findKMP.hpp"
 
 std::string randomString(size_t len) {
-    string result;
+    std::string result;
     for (size_t i = 0; i < len; ++i) {
         result += 'A' + rand() % 2;
     }
@@ -18,7 +19,7 @@ void test (std::vector<int> &resN, std::vector<int> &resKMP,
 std::string const &str, std::string const &txt) {
 
     resN = findN(str, txt);
-    resKMP = resKMP = findKMP(str, txt);
+    resKMP = findKMP(str, txt);
     assert(resN == resKMP);
  }
 
@@ -37,6 +38,6 @@ void tests() {
 }
 
 int main() {
-    srand(time(a));
+    srand(time(0));
     tests();
 }
