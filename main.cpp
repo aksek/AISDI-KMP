@@ -8,7 +8,7 @@
 #include"findKMP.hpp"
 
 std::string randomString(size_t len, size_t alphSize) {
-    if (alphSize > 'Z' - 'A' + 1) ralphSize = 'Z' - 'A' + 1;
+    if (alphSize > 'Z' - 'A' + 1) alphSize = 'Z' - 'A' + 1;
     std::string result;
     for (size_t i = 0; i < len; ++i) {
         result += 'A' + rand() % alphSize;
